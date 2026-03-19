@@ -50,6 +50,70 @@
         });
     }
 
+    // ── Research Scroll Navigation (must be before switchTab) ──
+    const researchScrollNav = document.getElementById('researchScrollNav');
+    const scrollNavUp = document.getElementById('scrollNavUp');
+    const scrollNavDown = document.getElementById('scrollNavDown');
+    const scrollNavCounter = document.getElementById('scrollNavCounter');
+    const researchPapers = document.querySelectorAll('.research-paper');
+    let currentPaperIndex = 0;
+
+    function updateScrollNav() {
+        if (!scrollNavCounter) return;
+        scrollNavCounter.textContent = (currentPaperIndex + 1) + ' / ' + researchPapers.length;
+        if (scrollNavUp) scrollNavUp.disabled = currentPaperIndex === 0;
+        if (scrollNavDown) scrollNavDown.disabled = currentPaperIndex === researchPapers.length - 1;
+    }
+
+    function scrollToPaper(index) {
+        if (index < 0 || index >= researchPapers.length) return;
+        currentPaperIndex = index;
+        researchPapers[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+        updateScrollNav();
+    }
+
+    function toggleResearchScrollNav(tabId) {
+        if (!researchScrollNav) return;
+        if (tabId === 'research') {
+            researchScrollNav.classList.add('visible');
+        } else {
+            researchScrollNav.classList.remove('visible');
+        }
+    }
+
+    if (scrollNavUp) {
+        scrollNavUp.addEventListener('click', () => {
+            scrollToPaper(currentPaperIndex - 1);
+        });
+    }
+
+    if (scrollNavDown) {
+        scrollNavDown.addEventListener('click', () => {
+            scrollToPaper(currentPaperIndex + 1);
+        });
+    }
+
+    // IntersectionObserver to track which paper is in view
+    if (researchPapers.length > 0) {
+        const paperObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const idx = Array.from(researchPapers).indexOf(entry.target);
+                    if (idx !== -1) {
+                        currentPaperIndex = idx;
+                        updateScrollNav();
+                    }
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 60}px 0px -30% 0px`
+        });
+
+        researchPapers.forEach(paper => paperObserver.observe(paper));
+    }
+
+    // ── switchTab (uses toggleResearchScrollNav above) ──────
     function switchTab(tabId) {
         // Deactivate all
         tabs.forEach(t => t.classList.remove('active'));
@@ -171,68 +235,44 @@
         }
     });
 
-    // ── Research Scroll Navigation ──────────────────────────
-    const researchScrollNav = document.getElementById('researchScrollNav');
-    const scrollNavUp = document.getElementById('scrollNavUp');
-    const scrollNavDown = document.getElementById('scrollNavDown');
-    const scrollNavCounter = document.getElementById('scrollNavCounter');
-    const researchPapers = document.querySelectorAll('.research-paper');
-    let currentPaperIndex = 0;
+    // ── Dark Mode Toggle ────────────────────────────────────
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
 
-    function updateScrollNav() {
-        if (!scrollNavCounter) return;
-        scrollNavCounter.textContent = (currentPaperIndex + 1) + ' / ' + researchPapers.length;
-        if (scrollNavUp) scrollNavUp.disabled = currentPaperIndex === 0;
-        if (scrollNavDown) scrollNavDown.disabled = currentPaperIndex === researchPapers.length - 1;
+    function getEffectiveTheme() {
+        const attr = root.getAttribute('data-theme');
+        if (attr) return attr;
+        try {
+            const stored = localStorage.getItem('theme');
+            if (stored) return stored;
+        } catch (e) { /* localStorage may be blocked on file:// */ }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    function scrollToPaper(index) {
-        if (index < 0 || index >= researchPapers.length) return;
-        currentPaperIndex = index;
-        researchPapers[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
-        updateScrollNav();
+    function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        try { localStorage.setItem('theme', theme); } catch (e) { }
     }
 
-    if (scrollNavUp) {
-        scrollNavUp.addEventListener('click', () => {
-            scrollToPaper(currentPaperIndex - 1);
+    // Apply saved theme on load (if any)
+    try {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) applyTheme(savedTheme);
+    } catch (e) { }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = getEffectiveTheme();
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
         });
     }
 
-    if (scrollNavDown) {
-        scrollNavDown.addEventListener('click', () => {
-            scrollToPaper(currentPaperIndex + 1);
-        });
-    }
-
-    // IntersectionObserver to track which paper is in view
-    if (researchPapers.length > 0) {
-        const paperObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const idx = Array.from(researchPapers).indexOf(entry.target);
-                    if (idx !== -1) {
-                        currentPaperIndex = idx;
-                        updateScrollNav();
-                    }
-                }
-            });
-        }, {
-            threshold: 0.3,
-            rootMargin: `-${parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 60}px 0px -30% 0px`
-        });
-
-        researchPapers.forEach(paper => paperObserver.observe(paper));
-    }
-
-    // Show/hide research scroll nav based on active tab
-    function toggleResearchScrollNav(tabId) {
-        if (!researchScrollNav) return;
-        if (tabId === 'research') {
-            researchScrollNav.classList.add('visible');
-        } else {
-            researchScrollNav.classList.remove('visible');
+    // Respond to system theme changes when no manual override is active
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (!root.getAttribute('data-theme')) {
+            // No manual override — CSS @media handles it automatically
         }
-    }
+    });
 
 })();

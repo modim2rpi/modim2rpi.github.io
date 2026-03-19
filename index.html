@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shahid Modi — Researcher &amp; Ph.D. Candidate</title>
     <meta name="description"
-        content="Shahid Modi — Ph.D. Candidate in Computer Science at RPI. Research in Agentic AI, Network Science, and Large-Scale Data Analysis.">    <link rel="icon"
+        content="Shahid Modi — Ph.D. Candidate in Computer Science at RPI. Research in Agentic AI, Network Science, and Large-Scale Data Analysis.">
+    <link rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='12' width='100' height='100' fill='%23384959'/><text x='50' y='68' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='700' fill='%23BDDDFC'>SM</text></svg>">
     <!-- Open Graph -->
     <meta property="og:title" content="Shahid Modi — Researcher & Ph.D. Candidate">
@@ -64,6 +65,23 @@
                     <span>Principles</span>
                 </button>
             </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                <svg class="theme-icon theme-icon--light" viewBox="0 0 24 24" width="20" height="20">
+                    <path
+                        d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" />
+                </svg> <svg class="theme-icon theme-icon--dark" viewBox="0 0 24 24" width="20" height="20" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="5" fill="currentColor" stroke="none" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+            </button>
             <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -78,14 +96,12 @@
             <div class="hero">
                 <div class="hero-text">
                     <div class="hero-badge">Ph.D. Candidate &middot; Computer Science</div>
-                    <h1>Shahid Modi</h1>                    <p class="hero-subtitle">Graduating August 2026 &middot; Advised by <a
+                    <h1>Shahid Modi</h1>
+                    <p class="hero-subtitle">Graduating August 2026 &middot; Advised by <a
                             href="https://www.cs.rpi.edu/~szymansk" target="_blank" rel="noopener">Dr. Boleslaw
                             Szymanski</a><br>
                         Rensselaer Polytechnic Institute, Troy, NY</p>
-                    <p class="hero-goal">Seeking a <strong>postdoctoral, research fellow, or researcher</strong>
-                        position for 1–3 years to deepen expertise, with a long-term vision of becoming a dynamic
-                        <strong>industry researcher and/or professor</strong>.
-                    </p>
+                    <p class="hero-goal">Seeking a post-doctorate research position after Ph.D. completion.</p>
                     <div class="hero-links">
                         <a href="https://scholar.google.com/citations?user=pvpWxKUAAAAJ&hl=en" target="_blank"
                             rel="noopener" class="link-btn" title="Google Scholar">
@@ -125,11 +141,8 @@
                 </div>
                 <div class="hero-photo">
                     <div class="photo-placeholder" id="profilePhoto">
-                        <svg viewBox="0 0 24 24" width="64" height="64">
-                            <path
-                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                        </svg>
-                        <span>Add your photo here<br><small>Replace with a .jpg in assets/</small></span>
+                        <img src="assets/portrait.png" alt="Shahid Modi"
+                            style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
                     </div>
                 </div>
             </div> <!-- Research Agenda -->
@@ -138,57 +151,61 @@
             <div class="agenda-grid">
                 <!-- Pillar 1 -->
                 <div class="agenda-card">
-                    <div class="agenda-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z" />
-                        </svg>
+                    <div class="agenda-card-header">
+                        <div class="agenda-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z" />
+                            </svg>
+                        </div>
+                        <h3>Agentic AI for AI‑Human Interaction</h3>
                     </div>
-                    <h3>Agentic AI for AI‑Human Interaction</h3>
                     <p>Building <strong>AI agents with growing personalities</strong> shaped by ongoing experience —
-                        ideal for
-                        experimental studies involving agents in conversations, social media dynamics, and debate
-                        mediation. Generating <strong>synthetic interaction datasets</strong> with high fidelity to real
-                        human dialogue.
-                    </p>
+                        ideal for experimental studies involving agents in conversations, social media dynamics, and
+                        debate mediation.</p>
+                    <p>Generating <strong>synthetic interaction datasets</strong> with high fidelity to real human
+                        dialogue.</p>
                 </div>
                 <!-- Pillar 2 -->
                 <div class="agenda-card">
-                    <div class="agenda-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
-                        </svg>
+                    <div class="agenda-card-header">
+                        <div class="agenda-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" />
+                            </svg>
+                        </div>
+                        <h3>Large‑Scale Qualitative Analyses &amp; Attribute Generation</h3>
                     </div>
-                    <h3>Large‑Scale Qualitative Analyses &amp; Attribute Generation</h3>
                     <p>Leveraging <strong>LLMs, transformers, ML and statistical techniques</strong> to assign useful
-                        qualities to data
-                        lakes efficiently. Describing profiles, opinions, and leanings of individuals, groups, and
-                        communities at very large scales. A core focus is creating an <em>agentic layer</em> over
-                        traditional relational or
-                        graph datasets to enable <strong>scientific agent swarms</strong> to generate research and data
-                        products
+                        qualities to data lakes efficiently. Describing profiles, opinions, and leanings of individuals,
+                        groups, and communities at very large scales.</p>
+                    <p>A core focus is creating an <em>agentic layer</em> over traditional relational or graph datasets
+                        to enable <strong>scientific agent swarms</strong> to generate research and data products
                         autonomously.</p>
                 </div>
                 <!-- Pillar 3 -->
                 <div class="agenda-card">
-                    <div class="agenda-icon">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="3.2" />
-                            <path
-                                d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                            <path d="M6 6h2v2H6z M3 9h1v6H3z M20 9h1v6h-1z M6 16h2v2H6z M16 6h2v2h-2z M16 16h2v2h-2z"
-                                opacity=".3" />
-                        </svg>
+                    <div class="agenda-card-header">
+                        <div class="agenda-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="3.2" />
+                                <path
+                                    d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                                <path
+                                    d="M6 6h2v2H6z M3 9h1v6H3z M20 9h1v6h-1z M6 16h2v2H6z M16 6h2v2h-2z M16 16h2v2h-2z"
+                                    opacity=".3" />
+                            </svg>
+                        </div>
+                        <h3>Graph‑Enabled Simulations &amp; Sciences</h3>
                     </div>
-                    <h3>Graph‑Enabled Simulations &amp; Sciences</h3>
                     <p>Building <strong>graph databases from traditional data forms</strong> and leveraging network
-                        science to model any
-                        problem. Simulations of social media dynamics, <strong>disaster/crisis response</strong>, and
-                        network grids — with nodes as hubs, actors, and events,
-                        multi-attribute edges capturing complex relationships. Systems with <strong>underlying graph
-                            structures</strong> where agents act as
-                        nodes, enabling interactive simulations of unbounded complexity.</p>
+                        science to model any problem. Simulations of social media dynamics,
+                        <strong>disaster/crisis response</strong>, and network grids — with nodes as hubs, actors, and
+                        events, multi-attribute edges capturing complex relationships.
+                    </p>
+                    <p>Systems with <strong>underlying graph structures</strong> where agents act as nodes, enabling
+                        interactive simulations of unbounded complexity.</p>
                 </div>
             </div>
         </section>
@@ -196,11 +213,13 @@
         <!-- ─────────────── II. RESEARCH ─────────────── -->
         <section class="page" id="research">
             <div class="section-header">
-                <svg class="section-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
-                </svg>
-                <h2>Research Portfolio</h2>
+                <h2>
+                    <svg class="section-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                    </svg>
+                    Research Portfolio
+                </h2>
                 <p class="section-sub">Published work and ongoing contributions</p>
             </div>
             <div class="research-stack" id="researchStack">
@@ -210,7 +229,8 @@
                     <div class="paper-text">
                         <div class="card-top">
                             <div class="card-venue"><span class="venue-badge nature">Nature Scientific Reports</span>
-                                <span class="card-year">2025</span></div>
+                                <span class="card-year">2025</span>
+                            </div>
                         </div>
                         <h3>Testing the Limits of Large Language Models in Debating Humans</h3>
                         <p class="card-authors">J. Flamino, <strong>M.S. Modi</strong>, B.K. Szymanski, B. Cross &amp;
@@ -222,16 +242,25 @@
                                 <span class="method-tag">Human Subject Study</span>
                                 <span class="method-tag">GPT-4 / Llama 2</span>
                             </div>
-                            <p>Rigorously tested <strong>LLM-driven agents as debate partners</strong> and confederates
-                                in a pre-registered
-                                study with 251 participants across 37 games. Agents blended in and focused on
-                                debate topics better than humans, <strong>improving overall productivity</strong>.</p>
-                            <p>However, humans perceived agents as less convincing — agents required <strong>6.25× more
-                                    conversations</strong> to
-                                induce equivalent opinion switches. Established behavioral signatures distinguishing
-                                human
-                                from AI-generated conversational data through <strong>Bayesian multilevel logistic
-                                    regression</strong>.</p>
+                            <p>A pre-registered study rigorously testing LLM-driven agents as debate partners and
+                                confederates alongside 251 human participants across 37 opinion-consensus games.</p>
+                            <ul class="paper-highlights">
+                                <li>Designed three game types — all-human (HH), all-agent (AA), and mixed (AH) — with
+                                    six-player anonymous debate sessions on diet preferences, collecting <strong>713
+                                        conversations and 15,804 messages</strong>.</li>
+                                <li>Agents blended in convincingly and stayed more on-topic than humans,
+                                    <strong>improving overall debate productivity</strong> across mixed games.
+                                </li>
+                                <li>Bayesian multilevel logistic regression revealed agents need <strong>6.25× more
+                                        conversations</strong> to induce the same number of human opinion switches as
+                                    human-to-human debates.</li>
+                                <li>Humans perceived agents as significantly less confident — perceived confidence
+                                    ratings were <strong>1.8× lower</strong> for agents vs. other humans (95% credible
+                                    interval).</li>
+                                <li>Established distinct behavioral signatures between human and AI-generated
+                                    conversational data, including differences in message cadence, opinion-switching
+                                    frequency, and productivity distributions.</li>
+                            </ul>
                         </div>
                         <div class="card-footer">
                             <a href="https://doi.org/10.1038/s41598-025-98378-1" target="_blank" rel="noopener"
@@ -243,9 +272,6 @@
                                 Read Paper
                             </a>
                         </div>
-                    </div>
-                    <div class="paper-visual">
-                        <img src="assets/LLM-human-debate.png" alt="LLM-Human Debate experimental design diagram">
                     </div>
                 </div>
 
@@ -265,20 +291,29 @@
                                 <span class="method-tag">Text Classification</span>
                                 <span class="method-tag">Shared Task</span>
                             </div>
-                            <p>Competing in the <strong>ACL SemEval 2026 shared task</strong>, applying
-                                transformer-based models and advanced
-                                NLP techniques for semantic evaluation challenges. Developing <strong>novel
-                                    classification
-                                    approaches</strong> and fine-tuning strategies to achieve competitive performance on
-                                shared task
-                                benchmarks.</p>
+                            <p>Competing in the ACL SemEval 2026 shared task, applying transformer-based models and
+                                advanced NLP techniques for semantic evaluation challenges.</p>
+                            <ul class="paper-highlights">
+                                <li>Developing <strong>novel text classification architectures</strong> combining
+                                    pre-trained transformer encoders with task-specific fine-tuning heads for the shared
+                                    task benchmarks.</li>
+                                <li>Implementing <strong>multi-stage fine-tuning strategies</strong> — domain-adaptive
+                                    pre-training followed by task-specific optimization — to boost classification
+                                    performance on out-of-domain data.</li>
+                                <li>Experimenting with <strong>ensemble methods</strong> that combine predictions from
+                                    multiple model variants to improve robustness and reduce variance across evaluation
+                                    metrics.</li>
+                                <li>Applying rigorous <strong>ablation studies</strong> on tokenization, learning
+                                    rates, and layer freezing schedules to understand the contribution of each
+                                    component.</li>
+                                <li>Targeting <strong>competitive ranking</strong> among international teams on the
+                                    official SemEval 2026 leaderboard with reproducible, well-documented experimental
+                                    pipelines.</li>
+                            </ul>
                         </div>
                         <div class="card-footer">
                             <span class="card-status">📄 In Preparation</span>
                         </div>
-                    </div>
-                    <div class="paper-visual">
-                        <img src="assets/semeval-architecture.png" alt="SemEval model architecture diagram">
                     </div>
                 </div>
 
@@ -298,17 +333,25 @@
                                 <span class="method-tag">Sentiment Analysis</span>
                                 <span class="method-tag">Weibo Data</span>
                             </div>
-                            <p>Analyzed <strong>over 4 million Weibo posts</strong> during the initial COVID-19 outbreak
-                                (Nov 2019 – Mar
-                                2020). Used Meta Llama 3 8B with few-shot prompting to classify posts into <strong>four
-                                    sentiment
-                                    categories</strong> — positive, negative, sarcastic, and neutral — going beyond
-                                traditional binary
-                                classification.</p>
-                            <p>Revealed how social events and public health measures shifted public
-                                sentiment over time, with <strong>sarcasm captured as a distinct dimension</strong>
-                                reflecting potential
-                                self-censorship on Chinese social media platforms.</p>
+                            <p>Large-scale sentiment analysis of over 4 million Chinese Weibo posts during the initial
+                                COVID-19 outbreak (Nov 2019 – Mar 2020) using Meta Llama 3 8B.</p>
+                            <ul class="paper-highlights">
+                                <li>Classified posts into <strong>four sentiment categories</strong> — positive,
+                                    negative, sarcastic, and neutral — going beyond traditional binary classification
+                                    using few-shot prompting on the Llama 3 8B Instruction-tuned model.</li>
+                                <li>Processed <strong>4,049,407 posts</strong> after cleaning duplicates (21.66%),
+                                    reposts (23.35%), and spam with subtle character variations designed to evade
+                                    Weibo's filters.</li>
+                                <li>Captured <strong>sarcasm as a distinct sentiment dimension</strong>, revealing its
+                                    use as a potential self-censorship mechanism on Chinese social media to avoid
+                                    community-driven moderation.</li>
+                                <li>Demonstrated how <strong>social events and government public health
+                                        measures</strong> caused measurable shifts in sentiment distributions — initial
+                                    positive support gradually transitioned to increased negativity.</li>
+                                <li>Presented a <strong>scalable LLM-based pipeline</strong> for non-binary Chinese
+                                    text sentiment classification, outperforming traditional lexicon-based and SVM
+                                    approaches in nuance and generalizability.</li>
+                            </ul>
                         </div>
                         <div class="card-footer">
                             <a href="https://doi.org/10.3390/e27030290" target="_blank" rel="noopener"
@@ -321,17 +364,15 @@
                             </a>
                         </div>
                     </div>
-                    <div class="paper-visual">
-                        <img src="assets/covid-19-weibo.png" alt="COVID-19 Weibo sentiment analysis results">
-                    </div>
                 </div>
 
-                <!-- Paper 4: IEEE CommMag — styled quote instead of image -->
+                <!-- Paper 4: IEEE CommMag -->
                 <div class="research-paper" id="paper-3">
                     <div class="paper-text">
                         <div class="card-top">
                             <div class="card-venue"><span class="venue-badge ieee">IEEE Communications Magazine</span>
-                                <span class="card-year">2024</span></div>
+                                <span class="card-year">2024</span>
+                            </div>
                         </div>
                         <h3>Dynamics of Ideological Biases of Social Media Users</h3>
                         <p class="card-authors"><strong>M.S. Modi</strong>, J. Flamino &amp; B.K. Szymanski</p>
@@ -342,17 +383,28 @@
                                 <span class="method-tag">NLP</span>
                                 <span class="method-tag">Flow Matrices</span>
                             </div>
-                            <p>Tracked the <strong>evolution of user viewpoint groups</strong> on Twitter and Parler
-                                through large-scale
-                                social media data processing (60GB+). Demonstrated that <strong>homophily drives group
-                                    formation</strong> — users seek groups whose members hold viewpoints sufficiently
-                                close to
-                                their own.</p>
-                            <p>Found that Twitter evolved toward <strong>bimodal viewpoint distribution</strong>, while
-                                Parler
-                                formed a single dominant echo chamber. Proposed a framework using <strong>flow matrices
-                                    and bias
-                                    tracking</strong> to capture inter-group movement dynamics.</p>
+                            <p>Tracked the evolution of user viewpoint groups on Twitter and Parler through large-scale
+                                social media data processing (60GB+) during the 2020 U.S. Presidential election period.
+                            </p>
+                            <ul class="paper-highlights">
+                                <li>Assigned initial and final political biases to users by computing the
+                                    <strong>average bias of URL links</strong> they posted during their first and last
+                                    months of activity (Sep–Dec 2020).
+                                </li>
+                                <li>Demonstrated that <strong>homophily drives group formation</strong> online — users
+                                    seek groups whose members hold viewpoints sufficiently close to their own, or they
+                                    leave the platform.</li>
+                                <li>Twitter evolved toward a <strong>bimodal viewpoint distribution</strong> with two
+                                    stable poles (liberal and conservative), while Parler converged into a single
+                                    dominant Right-leaning echo chamber.</li>
+                                <li>Constructed <strong>flow matrices</strong> capturing inter-group user migration to
+                                    quantify how individuals transition between ideological groups over the tracking
+                                    period.</li>
+                                <li>Extended prior offline homophily findings (campus student interactions) to
+                                    <strong>platform-wide online settings</strong>, showing the same social dynamics
+                                    govern group retention and polarization at scale.
+                                </li>
+                            </ul>
                         </div>
                         <div class="card-footer">
                             <a href="https://ieeexplore.ieee.org/document/10520172" target="_blank" rel="noopener"
@@ -363,14 +415,6 @@
                                 </svg>
                                 Read Paper
                             </a>
-                        </div>
-                    </div>
-                    <div class="paper-visual">
-                        <div class="paper-quote">
-                            <blockquote>Homophily drives group formation and evolution online — users seek groups whose
-                                members hold viewpoints sufficiently close to their own, creating emergent echo chambers
-                                shaped by the platform's architecture.</blockquote>
-                            <cite>— Modi, Flamino &amp; Szymanski, IEEE CommMag 2024</cite>
                         </div>
                     </div>
                 </div>
@@ -391,16 +435,25 @@
                                 <span class="method-tag">CEM Matching</span>
                                 <span class="method-tag">LLM Classification</span>
                             </div>
-                            <p>Analyzed <strong>over 100 scientific prizes</strong> and collaboration behaviors of
-                                5,000+ CS prizewinners.
-                                Found that prizewinners <strong>collaborate earlier and more frequently</strong> with
-                                other prizewinners than
-                                non-awardees.</p>
-                            <p>Using <strong>Coarsened Exact Matching (CEM)</strong> and regression, demonstrated that
-                                strength of collaboration increases the likelihood of winning awards.
-                                Examined the trend of CS researchers winning Nobel Prizes and used <strong>LLM
-                                    APIs</strong> to classify award instances as single-field or
-                                interdisciplinary.</p>
+                            <p>Comprehensive analysis of over 100 scientific prizes and the collaboration behaviors of
+                                5,000+ computer science prizewinners from 1965 to 2022.</p>
+                            <ul class="paper-highlights">
+                                <li>Built collaboration networks from the <strong>SciSciNet dataset</strong> linking
+                                    125 recognized CS prizes to 5,416 scholars, enabling large-scale analysis of
+                                    prizewinning dynamics.</li>
+                                <li>Found that prizewinners <strong>collaborate earlier and more frequently</strong>
+                                    with other prizewinners than researchers who have not yet received similar
+                                    recognition.</li>
+                                <li>Used <strong>Coarsened Exact Matching (CEM)</strong> and regression to demonstrate
+                                    that strength of collaboration with prizewinners increases the likelihood of
+                                    eventually winning an award.</li>
+                                <li>Discovered that recipients of general CS prizes collaborate more than specialists,
+                                    and that <strong>post-prizewinning collaborators are more likely to become future
+                                        prizewinners</strong>.</li>
+                                <li>Examined the trend of CS researchers winning Nobel Prizes and used <strong>LLM
+                                        APIs to classify</strong> award instances as single-field or interdisciplinary,
+                                    contrasting Nobel-Turing winner trajectories.</li>
+                            </ul>
                         </div>
                         <div class="card-footer">
                             <a href="https://arxiv.org/abs/2512.23919" target="_blank" rel="noopener" class="card-link">
@@ -411,10 +464,6 @@
                                 Read Preprint
                             </a>
                         </div>
-                    </div>
-                    <div class="paper-visual">
-                        <img src="assets/cs-cem-regression-turing.png"
-                            alt="CS prizewinning collaboration network analysis">
                     </div>
                 </div>
 
@@ -439,11 +488,13 @@
         <!-- ─────────────── III. BUILDING ─────────────── -->
         <section class="page" id="building">
             <div class="section-header">
-                <svg class="section-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zM18 19H4V5h14v14zM6 13h5v4H6v-4zm6-6h4v3h-4V7zM6 7h5v5H6V7zm6 4h4v6h-4v-6z" />
-                </svg>
-                <h2>What I'm Building</h2>
+                <h2>
+                    <svg class="section-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zM18 19H4V5h14v14zM6 13h5v4H6v-4zm6-6h4v3h-4V7zM6 7h5v5H6V7zm6 4h4v6h-4v-6z" />
+                    </svg>
+                    What I'm Building
+                </h2>
                 <p class="section-sub">Active projects, systems, and tools under development</p>
             </div>
 
@@ -574,11 +625,13 @@
         <!-- ─────────────── IV. EXPERIENCE ─────────────── -->
         <section class="page" id="experience">
             <div class="section-header">
-                <svg class="section-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
-                </svg>
-                <h2>Experience</h2>
+                <h2>
+                    <svg class="section-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z" />
+                    </svg>
+                    Experience
+                </h2>
                 <p class="section-sub">Education, research, professional work, and service</p>
             </div>
 
@@ -799,11 +852,13 @@
         <!-- ─────────────── V. PRINCIPLES ─────────────── -->
         <section class="page" id="principles">
             <div class="section-header">
-                <svg class="section-icon" viewBox="0 0 24 24">
-                    <path
-                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
-                </svg>
-                <h2>Teaching Principles &amp; Research Ethics</h2>
+                <h2>
+                    <svg class="section-icon" viewBox="0 0 24 24">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                    </svg>
+                    Teaching Principles &amp; Research Ethics
+                </h2>
                 <p class="section-sub">Philosophy on education, mentorship, and scientific integrity</p>
             </div>
 
