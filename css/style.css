@@ -16,28 +16,28 @@
 :root {
     --bg-primary: #eaecef;
     --bg-secondary: #dfe1e5;
-    --bg-card: #2a2e33;
-    --bg-card-hover: #31363c;
+    --bg-card: #40454c;
+    --bg-card-hover: #4a5058;
     --text-primary: #1e2127;
     --text-secondary: #4a4f58;
     --text-muted: #70757c;
-    /* On-card text (light on dark) */
-    --text-on-card: #e8eaed;
-    --text-on-card-sub: #a0a4ab;
-    --text-on-card-muted: #6b7078;
+    /* On-card text (light on medium-dark) */
+    --text-on-card: #f0f1f3;
+    --text-on-card-sub: #c5c8cd;
+    --text-on-card-muted: #929699;
     --accent: #3ca3cf;
     --accent-bright: #5ec4ea;
     --accent-dim: #2a7fa6;
     --accent-glow: rgba(60, 163, 207, .10);
-    --accent-glow-dark: rgba(60, 163, 207, .18);
+    --accent-glow-dark: rgba(60, 163, 207, .22);
     --border: rgba(0, 0, 0, .10);
-    --border-card: rgba(255, 255, 255, .06);
-    --border-accent: rgba(60, 163, 207, .30);
+    --border-card: rgba(255, 255, 255, .10);
+    --border-accent: rgba(60, 163, 207, .35);
     --radius: 10px;
     --radius-sm: 6px;
     --shadow: 0 2px 10px rgba(0, 0, 0, .06);
     --shadow-lg: 0 8px 28px rgba(0, 0, 0, .10);
-    --shadow-card: 0 4px 20px rgba(0, 0, 0, .18);
+    --shadow-card: 0 4px 16px rgba(0, 0, 0, .12);
     --transition: .25s cubic-bezier(.4, 0, .2, 1);
     --nav-height: 60px;
     --max-width: 1200px;
@@ -277,15 +277,15 @@ main {
     margin-top: 14px;
     font-size: .92rem;
     padding: 14px 18px;
-    background: var(--bg-card);
-    color: var(--text-on-card-sub);
+    background: #d6d9de;
+    color: var(--text-secondary);
     border-left: 3px solid var(--accent);
     border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow);
 }
 
 .hero-goal strong {
-    color: var(--text-on-card);
+    color: var(--text-primary);
 }
 
 .hero-links {
@@ -302,12 +302,12 @@ main {
     padding: 10px 18px;
     font-size: .85rem;
     font-weight: 500;
-    color: var(--text-on-card);
+    color: #fff;
     background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius-sm);
     transition: all var(--transition);
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow);
 }
 
 .link-btn svg {
@@ -350,7 +350,7 @@ main {
     width: 220px;
     height: 270px;
     background: var(--bg-card);
-    border: 2px dashed var(--border-accent);
+    border: 2px dashed rgba(60, 163, 207, .35);
     border-radius: var(--radius);
     display: flex;
     flex-direction: column;
@@ -358,9 +358,9 @@ main {
     justify-content: center;
     gap: 12px;
     text-align: center;
-    color: var(--text-on-card-muted);
+    color: var(--text-on-card-sub);
     font-size: .78rem;
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--shadow);
 }
 
 .photo-placeholder svg {
@@ -450,7 +450,7 @@ main {
 .agenda-card:hover {
     border-color: var(--border-accent);
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, .28);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .16);
 }
 
 .agenda-card:hover::before {
@@ -510,7 +510,7 @@ main {
 
 .research-card:hover {
     border-color: var(--border-accent);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, .28);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .16);
 }
 
 .card-top {
@@ -628,7 +628,7 @@ main {
     font-size: .7rem;
     font-weight: 500;
     padding: 3px 9px;
-    background: var(--accent-glow-dark);
+    background: rgba(60, 163, 207, .15);
     color: var(--accent-bright);
     border: 1px solid var(--border-accent);
     border-radius: 4px;
@@ -834,10 +834,10 @@ main {
 .skill-tags span {
     font-size: .72rem;
     padding: 4px 10px;
-    background: rgba(255, 255, 255, .06);
+    background: rgba(255, 255, 255, .08);
     color: var(--text-on-card-sub);
     border-radius: 4px;
-    border: 1px solid var(--border-card);
+    border: 1px solid rgba(255, 255, 255, .10);
     transition: all var(--transition);
 }
 
@@ -1215,30 +1215,31 @@ footer {
 .research-stack {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 28px;
 }
 
 .research-paper {
     display: grid;
-    grid-template-columns: 1fr 380px;
-    gap: 32px;
-    align-items: start;
-    min-height: calc(100vh - var(--nav-height) - 120px);
-    padding: 48px 0;
-    border-bottom: 1px solid var(--border);
-    scroll-snap-align: start;
-}
-
-.research-paper:last-child {
-    border-bottom: none;
-}
-
-.paper-text {
+    grid-template-columns: 1fr;
     background: var(--bg-card);
     border: 1px solid var(--border-card);
     border-radius: var(--radius);
-    padding: 28px;
+    overflow: hidden;
     box-shadow: var(--shadow-card);
+    transition: all var(--transition);
+}
+
+.research-paper:hover {
+    border-color: var(--border-accent);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .16);
+}
+
+.paper-text {
+    padding: 28px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .paper-text .card-top {
@@ -1301,44 +1302,46 @@ footer {
     color: var(--text-on-card-muted);
 }
 
+/* Paper visual — banner image inside card */
 .paper-visual {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 12px;
-    position: sticky;
-    top: calc(var(--nav-height) + 48px);
+    padding: 20px 28px 24px;
+    background: rgba(0, 0, 0, .12);
+    border-top: 1px solid var(--border-card);
 }
 
 .paper-visual img {
     width: 100%;
-    max-width: 380px;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-card);
+    max-width: 720px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
     transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .paper-visual img:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-lg);
+    transform: scale(1.01);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .22);
 }
 
 /* Styled quote for IEEE paper */
 .paper-quote {
-    background: var(--bg-card);
-    border: 1px solid var(--border-card);
+    background: rgba(0, 0, 0, .08);
+    border: none;
     border-left: 4px solid var(--accent);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    box-shadow: var(--shadow-card);
+    border-radius: var(--radius-sm);
+    padding: 24px 20px;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
+    max-width: 720px;
 }
 
 .paper-quote blockquote {
-    font-size: .95rem;
+    font-size: .92rem;
     font-style: italic;
     line-height: 1.7;
     color: var(--text-on-card);
@@ -1431,13 +1434,10 @@ footer {
 @media (max-width: 900px) {
     .research-paper {
         grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 32px 0;
     }
 
     .paper-visual {
-        position: static;
-        order: -1;
+        padding: 16px;
     }
 
     .paper-visual img {
