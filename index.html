@@ -95,7 +95,8 @@
         <section class="page active" id="home">
             <div class="hero">
                 <div class="hero-text">
-                    <div class="hero-badge">Ph.D. Candidate &middot; Computer Science</div>
+                    <div class="hero-badge">Ph.D. Candidate &middot; Computer Science &middot; Experimental &amp;
+                        Applied AI</div>
                     <h1>Shahid Modi</h1>
                     <p class="hero-subtitle">Graduating August 2026 &middot; Advised by <a
                             href="https://www.cs.rpi.edu/~szymansk" target="_blank" rel="noopener">Dr. Boleslaw
@@ -125,8 +126,7 @@
                                     d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                             </svg>
                             Email
-                        </a>
-                        <a href="assets/Resume_Modi_2026.pdf" download class="link-btn link-btn--accent"
+                        </a> <a href="assets/Modi_Resume_phd.pdf" download class="link-btn link-btn--accent"
                             title="Download Resume">
                             <svg viewBox="0 0 24 24" width="20" height="20">
                                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
@@ -282,37 +282,35 @@
                             <div class="card-venue"><span class="venue-badge acl">ACL SemEval 2026</span> <span
                                     class="card-year">2026</span></div>
                         </div>
-                        <h3>SemEval 2026 — Shared Task Submission</h3>
+                        <h3>An LLM-Encoder Ensemble for Coarse-to-Fine Valence-Arousal Sentiment Prediction</h3>
                         <p class="card-authors"><strong>M.S. Modi</strong> &amp; B.K. Szymanski</p>
                         <div class="card-body">
                             <div class="method-tag-row">
-                                <span class="method-tag">Transformers</span>
-                                <span class="method-tag">NLP</span>
-                                <span class="method-tag">Text Classification</span>
-                                <span class="method-tag">Shared Task</span>
+                                <span class="method-tag">Qwen3-8B</span>
+                                <span class="method-tag">PEFT + LoRA</span>
+                                <span class="method-tag">Encoder Distillation</span>
+                                <span class="method-tag">Multilingual NLP</span>
                             </div>
-                            <p>Competing in the ACL SemEval 2026 shared task, applying transformer-based models and
-                                advanced NLP techniques for semantic evaluation challenges.</p>
+                            <p>Trained LLM-to-encoder ensemble models for multilingual valence-arousal sentiment
+                                inference, combining large language models with efficient encoder architectures.</p>
                             <ul class="paper-highlights">
-                                <li>Developing <strong>novel text classification architectures</strong> combining
-                                    pre-trained transformer encoders with task-specific fine-tuning heads for the shared
-                                    task benchmarks.</li>
-                                <li>Implementing <strong>multi-stage fine-tuning strategies</strong> — domain-adaptive
-                                    pre-training followed by task-specific optimization — to boost classification
-                                    performance on out-of-domain data.</li>
-                                <li>Experimenting with <strong>ensemble methods</strong> that combine predictions from
-                                    multiple model variants to improve robustness and reduce variance across evaluation
-                                    metrics.</li>
-                                <li>Applying rigorous <strong>ablation studies</strong> on tokenization, learning
-                                    rates, and layer freezing schedules to understand the contribution of each
-                                    component.</li>
-                                <li>Targeting <strong>competitive ranking</strong> among international teams on the
-                                    official SemEval 2026 leaderboard with reproducible, well-documented experimental
-                                    pipelines.</li>
+                                <li>Trained <strong>Qwen3-8B with PEFT + LoRA</strong> and distilled into efficient
+                                    encoders for scalable inference on the shared task benchmarks.</li>
+                                <li>Evaluated alternative solutions with rigorous <strong>ablation studies</strong> on
+                                    tokenization, learning rates, and layer freezing schedules to understand each
+                                    component's contribution.</li>
+                                <li>Achieved <strong>top 6 RMSE overall</strong> among 15 multi-language entries with
+                                    <strong>1st place for an English subset</strong>.
+                                </li>
+                                <li>Implemented <strong>multi-stage fine-tuning strategies</strong> — domain-adaptive
+                                    pre-training followed by task-specific optimization to boost performance on
+                                    out-of-domain data.</li>
+                                <li>Designed <strong>ensemble methods</strong> combining predictions from multiple model
+                                    variants to improve robustness and reduce variance across evaluation metrics.</li>
                             </ul>
                         </div>
                         <div class="card-footer">
-                            <span class="card-status">📄 In Preparation</span>
+                            <span class="card-status">📄 Camera-Ready Stage</span>
                         </div>
                     </div>
                 </div>
@@ -333,15 +331,16 @@
                                 <span class="method-tag">Sentiment Analysis</span>
                                 <span class="method-tag">Weibo Data</span>
                             </div>
-                            <p>Large-scale sentiment analysis of over 4 million Chinese Weibo posts during the initial
-                                COVID-19 outbreak (Nov 2019 – Mar 2020) using Meta Llama 3 8B.</p>
+                            <p>Used Meta's Llama 3-8B model for four-category sentiment analysis of Chinese
+                                social media Weibo, classifying ~1 million posts during the initial COVID-19 outbreak
+                                (Nov 2019 – Mar 2020).</p>
                             <ul class="paper-highlights">
                                 <li>Classified posts into <strong>four sentiment categories</strong> — positive,
                                     negative, sarcastic, and neutral — going beyond traditional binary classification
                                     using few-shot prompting on the Llama 3 8B Instruction-tuned model.</li>
-                                <li>Processed <strong>4,049,407 posts</strong> after cleaning duplicates (21.66%),
-                                    reposts (23.35%), and spam with subtle character variations designed to evade
-                                    Weibo's filters.</li>
+                                <li>Validated results using a <strong>frontier LLM-as-a-judge</strong> and
+                                    synthetically generated data, outperforming traditional lexicon-based and SVM
+                                    approaches in nuance and generalizability.</li>
                                 <li>Captured <strong>sarcasm as a distinct sentiment dimension</strong>, revealing its
                                     use as a potential self-censorship mechanism on Chinese social media to avoid
                                     community-driven moderation.</li>
@@ -686,11 +685,12 @@
                                 <div class="timeline-date">Jun 2021 – Present</div>
                                 <h4>Research Assistant</h4>
                                 <p class="timeline-org">Network Science and Technology Center (NeST), RPI</p>
-                                <p>Working in Dr. Szymanski's lab on research funded by <strong>NSF</strong> and
-                                    <strong>DARPA</strong> grants. Responsible for meeting publication expectations and
-                                    maintaining project timelines. Mentored and delegated tasks to 3 undergraduate
-                                    researchers across multiple projects.
-                                </p>
+                                <p>Conducting <strong>NSF/DARPA-funded</strong> research; worked alongside 2 postdocs
+                                    and 3 undergrads. Co-writer for <strong>3+ proposals and grant applications</strong>
+                                    for NSF, DARPA, DoD, and ARL.</p>
+                                <p>Collaborating with cross-functional teams of researchers, engineers, and domain
+                                    experts across AI research, computational social science, linguistics, computational
+                                    statistics, and language modeling.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -698,19 +698,9 @@
                             <div class="timeline-content">
                                 <div class="timeline-date">Current</div>
                                 <h4>Graduate Student Representative</h4>
-                                <p class="timeline-org">Graduate Curricular Council, RPI</p>
-                                <p>Serving as the graduate student representative on the council that decides department
-                                    direction, curriculum design, and student petitions.</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <div class="timeline-date">Current</div>
-                                <h4>Graduate Mentor</h4>
-                                <p class="timeline-org">Rensselaer Polytechnic Institute</p>
-                                <p>Mentoring two incoming Ph.D. students at RPI — guiding research direction, coursework
-                                    planning, and professional development.</p>
+                                <p class="timeline-org">CS Grad Curricular Committee, RPI</p>
+                                <p>Volunteering as grad student rep on the CS Grad Curricular Committee. Also mentored
+                                    2 new grad students at RPI.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -750,13 +740,15 @@
                                 <div class="timeline-date">Jan 2021 – Present</div>
                                 <h4>Teaching Assistant</h4>
                                 <p class="timeline-org">Rensselaer Polytechnic Institute</p>
-                                <p>Assisted four different courses over three years: delivering lectures, leading
-                                    recitations, holding office hours, and grading.</p>
+                                <p>TA for five courses across multiple semesters. Always student-first,
+                                    taking responsibility in ensuring good student outcomes, not just evaluating them.
+                                </p>
                                 <div class="course-tags">
                                     <span class="course-tag">Introduction to Algorithms</span>
                                     <span class="course-tag">Application Design (Java)</span>
                                     <span class="course-tag">Software Design &amp; Documentation</span>
                                     <span class="course-tag">Open Source Software</span>
+                                    <span class="course-tag">Frontiers of Network Science</span>
                                 </div>
                             </div>
                         </div>
@@ -777,9 +769,13 @@
                                 <div class="timeline-date">May 2020 – Dec 2020</div>
                                 <h4>Fullstack Developer Intern</h4>
                                 <p class="timeline-org">Wizr Wealth</p>
-                                <p>Developed a fullstack web application connecting investors with finance experts using
-                                    Flutter (Android/iOS cross-platform) frontend and JavaScript/SQL backend. Worked
-                                    with a UI/UX expert and delivered rapid prototypes through completion.</p>
+                                <p>Built a fullstack web app (<strong>Flutter + JS/SQL + AWS EC2/RDS</strong>)
+                                    connecting investors with finance experts. Worked directly with the founder at the
+                                    incubation stage, iterating on production software with rapid release cycles and
+                                    delivering customer-facing features end-to-end.</p>
+                                <p>Delivered <strong>7+ product versions</strong> and engineered user registration and
+                                    auth systems, advisor recommendation and sorting systems, and cross-platform
+                                    reliability and scalability.</p>
                             </div>
                         </div>
                     </div>
@@ -796,53 +792,48 @@
                         Technical Skills
                     </h3>
                     <div class="skill-category">
-                        <h4>Machine Learning &amp; AI</h4>
+                        <h4>LLM, ML &amp; NLP</h4>
                         <div class="skill-tags">
-                            <span>HuggingFace</span>
-                            <span>Supervised Finetuning</span>
-                            <span>DPO</span>
+                            <span>LLM SFT</span>
+                            <span>GRPO / DPO / PPO</span>
+                            <span>LoRA / PEFT Adapters</span>
+                            <span>Quantization &amp; Training Optimization (10B+ LLMs)</span>
                             <span>RAG</span>
-                            <span>LLM APIs</span>
-                            <span>YOLO</span>
-                            <span>Faster RCNN</span>
-                            <span>Graph Neural Networks</span>
+                            <span>VectorDBs</span>
+                            <span>Agentic AI</span>
+                            <span>Synthetic Data Generation</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h4>Trustworthy ML &amp; CV</h4>
+                        <h4>Python Modules</h4>
                         <div class="skill-tags">
-                            <span>Adversarial ML</span>
-                            <span>Defense Techniques</span>
-                            <span>Regularization</span>
-                            <span>Object Detection</span>
-                            <span>Image Processing</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Computational Social Science</h4>
-                        <div class="skill-tags">
-                            <span>LLM-Human Communication</span>
-                            <span>Community Dynamics</span>
-                            <span>Statistics</span>
-                            <span>Predictive Modelling</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Programming &amp; Tools</h4>
-                        <div class="skill-tags">
-                            <span>Python</span>
                             <span>PyTorch</span>
+                            <span>HuggingFace Transformers</span>
                             <span>TensorFlow</span>
+                            <span>vLLM</span>
                             <span>Pandas</span>
-                            <span>OpenCV</span>
                             <span>NumPy / SciPy</span>
-                            <span>C++ (Parallel)</span>
-                            <span>Node.js</span>
-                            <span>PostgreSQL</span>
-                            <span>SQLite</span>
-                            <span>Flutter</span>
+                            <span>DuckDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Infrastructure</h4>
+                        <div class="skill-tags">
+                            <span>Linux</span>
                             <span>Git</span>
-                            <span>Agile</span>
+                            <span>Cloud LLM/ML Workflows (Remote GPUs)</span>
+                            <span>Neo4j</span>
+                            <span>Docker</span>
+                            <span>AWS EC2 &amp; RDS</span>
+                            <span>SQL / PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Statistics</h4>
+                        <div class="skill-tags">
+                            <span>Coarsened Exact Matching (CEM)</span>
+                            <span>Causal Inference</span>
+                            <span>Bayesian Multilevel Modeling</span>
                         </div>
                     </div>
                 </div>
